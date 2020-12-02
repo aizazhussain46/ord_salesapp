@@ -567,35 +567,35 @@ $arr = array (
 
 
 //echo json_encode($arr,JSON_UNESCAPED_SLASHES);
-// echo '<pre>';
-// print_r($arr);
-// die;
+echo '<pre>';
+print_r($arr);
+die;
 
-$curl = curl_init();
+// $curl = curl_init();
 
-curl_setopt_array($curl, array(
-CURLOPT_URL => "http://crm-test.hblasset.com:3001/api/dar",
-CURLOPT_RETURNTRANSFER => true,
-CURLOPT_ENCODING => "",
-CURLOPT_MAXREDIRS => 10,
-//CURLOPT_TIMEOUT => 30000,
-CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-CURLOPT_CUSTOMREQUEST => "POST",
-CURLOPT_POSTFIELDS => json_encode($arr),
-CURLOPT_HTTPHEADER => ["content-type: application/json"],
-));
+// curl_setopt_array($curl, array(
+// CURLOPT_URL => "http://crm-test.hblasset.com:3001/api/dar",
+// CURLOPT_RETURNTRANSFER => true,
+// CURLOPT_ENCODING => "",
+// CURLOPT_MAXREDIRS => 10,
+// //CURLOPT_TIMEOUT => 30000,
+// CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+// CURLOPT_CUSTOMREQUEST => "POST",
+// CURLOPT_POSTFIELDS => json_encode($arr),
+// CURLOPT_HTTPHEADER => ["content-type: application/json"],
+// ));
 
-$response = curl_exec($curl);
-$err = curl_error($curl);
+// $response = curl_exec($curl);
+// $err = curl_error($curl);
 
-curl_close($curl);
+// curl_close($curl);
 
-if ($err) {
-return back()->with('err', $err);
-} else {
-return back()->with('msg', json_decode($response));
+// if ($err) {
+// return back()->with('err', $err);
+// } else {
+// return back()->with('msg', json_decode($response));
 
-}
+// }
 
 
 }
