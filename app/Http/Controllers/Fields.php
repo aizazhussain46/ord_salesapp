@@ -73,47 +73,47 @@ class Fields extends Controller
           $status_updated = DB::table('forms')->where('form_id',$id )->update(['status' => 1]);
           $result_msg = ['msg','Your form has been submitted.'];  
           
-          $sales_email = DB::table('users')->where('id',$request->user_id)->first()->email;
-          $send = Mail::to($sales_email)->send(new Correction());
-          		if (empty($send)) {
-		          \DB::table('email_activities')->insert([
-		          'status' => 'success',
-		          'msg' => 'mail has been sent successfully',
-		          'action' => 'send back to changes',
-		          'created_at' => now()
-		          ]);
-		          }
-		          else {          
+    //       $sales_email = DB::table('users')->where('id',$request->user_id)->first()->email;
+    //       $send = Mail::to($sales_email)->send(new Correction());
+    //       		if (empty($send)) {
+		//           \DB::table('email_activities')->insert([
+		//           'status' => 'success',
+		//           'msg' => 'mail has been sent successfully',
+		//           'action' => 'send back to changes',
+		//           'created_at' => now()
+		//           ]);
+		//           }
+		//           else {          
 	
-		          \DB::table('email_activities')->insert([
-		          'status' => 'fail',
-		          'msg' => 'mail not sent',
-		           'action' => 'send back to changes',
-		          'created_at' => now()
-		          ]);	           
-		          }
-           $recipients = \DB::table('users')->select('email')->where('role_id',3)->get();
+		//           \DB::table('email_activities')->insert([
+		//           'status' => 'fail',
+		//           'msg' => 'mail not sent',
+		//            'action' => 'send back to changes',
+		//           'created_at' => now()
+		//           ]);	           
+		//           }
+    //        $recipients = \DB::table('users')->select('email')->where('role_id',3)->get();
 	 	
-	 	 foreach ($recipients as $recipient) {
-	 		$send = Mail::to($recipient)->send(new Correction());
-	 		if (empty($send)) {
-		          \DB::table('email_activities')->insert([
-		          'status' => 'success',
-		          'msg' => 'mail has been sent successfully',
-		          'action' => 'send back to changes',
-		          'created_at' => now()
-		          ]);
-		          }
-		          else {          
+	 	//  foreach ($recipients as $recipient) {
+	 	// 	$send = Mail::to($recipient)->send(new Correction());
+	 	// 	if (empty($send)) {
+		//           \DB::table('email_activities')->insert([
+		//           'status' => 'success',
+		//           'msg' => 'mail has been sent successfully',
+		//           'action' => 'send back to changes',
+		//           'created_at' => now()
+		//           ]);
+		//           }
+		//           else {          
 	
-		          \DB::table('email_activities')->insert([
-		          'status' => 'fail',
-		          'msg' => 'mail not sent',
-		           'action' => 'send back to changes',
-		          'created_at' => now()
-		          ]);	           
-		          }
-	 	}
+		//           \DB::table('email_activities')->insert([
+		//           'status' => 'fail',
+		//           'msg' => 'mail not sent',
+		//            'action' => 'send back to changes',
+		//           'created_at' => now()
+		//           ]);	           
+		//           }
+	 	// }
 	 	
         }
         else{

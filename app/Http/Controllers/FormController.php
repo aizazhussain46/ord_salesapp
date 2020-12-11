@@ -125,87 +125,87 @@ if($updated){
 
 $user_id = DB::table('forms')->where('form_id',$id)->first()->assigned_to;
 			
-	$retail_email = DB::table('users')->where('id',$user_id)->first()->email;
+	// $retail_email = DB::table('users')->where('id',$user_id)->first()->email;
   
-	  if($retail_email){
+	//   if($retail_email){
 	  
-		 $send = Mail::to($retail_email)->send(new Send_To_CBC());  
-		 if (empty($send)) {
-	          \DB::table('email_activities')->insert([
-	          'status' => 'success',
-	          'msg' => 'mail has been sent successfully',
-	          'action' => 'send to cbc',
-	          'created_at' => now()
-	          ]);
-	          }
-	          else {          
+	// 	 $send = Mail::to($retail_email)->send(new Send_To_CBC());  
+	// 	 if (empty($send)) {
+	//           \DB::table('email_activities')->insert([
+	//           'status' => 'success',
+	//           'msg' => 'mail has been sent successfully',
+	//           'action' => 'send to cbc',
+	//           'created_at' => now()
+	//           ]);
+	//           }
+	//           else {          
 
-	          \DB::table('email_activities')->insert([
-	          'status' => 'fail',
-	          'msg' => 'mail not sent',
-	           'action' => 'send to cbc',
-	          'created_at' => now()
-	          ]);	           
-	          }	
-	  }
+	//           \DB::table('email_activities')->insert([
+	//           'status' => 'fail',
+	//           'msg' => 'mail not sent',
+	//            'action' => 'send to cbc',
+	//           'created_at' => now()
+	//           ]);	           
+	//           }	
+	//   }
 	  
- $recipients = \DB::table('users')->select('email')->where('role_id',5)->get();
+//  $recipients = \DB::table('users')->select('email')->where('role_id',5)->get();
 	 	
-	 	 foreach ($recipients as $recipient) {
-	 		$send = Mail::to($recipient)->send(new Send_To_CBC());
-	 		  if (empty($send)) {
-		          \DB::table('email_activities')->insert([
-		          'status' => 'success',
-		          'msg' => 'mail has been sent successfully',
-		          'action' => 'send to cbc',
-		          'created_at' => now()
-		          ]);
-		          }
-		          else {          
+// 	 	 foreach ($recipients as $recipient) {
+// 	 		$send = Mail::to($recipient)->send(new Send_To_CBC());
+// 	 		  if (empty($send)) {
+// 		          \DB::table('email_activities')->insert([
+// 		          'status' => 'success',
+// 		          'msg' => 'mail has been sent successfully',
+// 		          'action' => 'send to cbc',
+// 		          'created_at' => now()
+// 		          ]);
+// 		          }
+// 		          else {          
 	
-		          \DB::table('email_activities')->insert([
-		          'status' => 'fail',
-		          'msg' => 'mail not sent',
-		           'action' => 'send to cbc',
-		          'created_at' => now()
-		          ]);	           
-		          }
-	 	}
+// 		          \DB::table('email_activities')->insert([
+// 		          'status' => 'fail',
+// 		          'msg' => 'mail not sent',
+// 		           'action' => 'send to cbc',
+// 		          'created_at' => now()
+// 		          ]);	           
+// 		          }
+// 	 	}
 	 	
 
- $recipients = \DB::table('users')->select('email')->where('role_id',3)->get();
+//  $recipients = \DB::table('users')->select('email')->where('role_id',3)->get();
 	 	
-	 	 foreach ($recipients as $recipient) {
-	 		$send = Mail::to($recipient)->send(new Send_To_CBC());
-	 		  if (empty($send)) {
-		          \DB::table('email_activities')->insert([
-		          'status' => 'success',
-		          'msg' => 'mail has been sent successfully',
-		          'action' => 'send to cbc',
-		          'created_at' => now()
-		          ]);
-		          }
-		          else {          
+// 	 	 foreach ($recipients as $recipient) {
+// 	 		$send = Mail::to($recipient)->send(new Send_To_CBC());
+// 	 		  if (empty($send)) {
+// 		          \DB::table('email_activities')->insert([
+// 		          'status' => 'success',
+// 		          'msg' => 'mail has been sent successfully',
+// 		          'action' => 'send to cbc',
+// 		          'created_at' => now()
+// 		          ]);
+// 		          }
+// 		          else {          
 	
-		          \DB::table('email_activities')->insert([
-		          'status' => 'fail',
-		          'msg' => 'mail not sent',
-		           'action' => 'send to cbc',
-		          'created_at' => now()
-		          ]);	           
-		          }
-	 	}
+// 		          \DB::table('email_activities')->insert([
+// 		          'status' => 'fail',
+// 		          'msg' => 'mail not sent',
+// 		           'action' => 'send to cbc',
+// 		          'created_at' => now()
+// 		          ]);	           
+// 		          }
+// 	 	}
 
 
-          $arr = [
-          'form_id'=>$id,
-          'msg'=>$r->msg,
-          'receiver_id' => 76/*\DB::table('users')->where('role_id',5)->first()->id*/,
-          'sender_id' =>  \Auth::user()->id,
-          'created_at' => now(),
-          'updated_at' => now(),
-          ];
-          DB::table('discussions')->insert($arr);
+          // $arr = [
+          // 'form_id'=>$id,
+          // 'msg'=>$r->msg,
+          // 'receiver_id' => 76/*\DB::table('users')->where('role_id',5)->first()->id*/,
+          // 'sender_id' =>  \Auth::user()->id,
+          // 'created_at' => now(),
+          // 'updated_at' => now(),
+          // ];
+          // DB::table('discussions')->insert($arr);
 
           return back()->with('msg','form has been sent to cbc');         
 	 	
