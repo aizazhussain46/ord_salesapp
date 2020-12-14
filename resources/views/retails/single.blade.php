@@ -102,7 +102,7 @@ td.td_print_action{padding-left: 130px!important;}
 </style>
 <div id="page-wrapper">
 
-<form method="post" action="{{url('ptc')}}">
+<!-- <form method="post" action="{{url('ptc')}}">
 {{csrf_field()}}
 <input type="hidden" name="agent_code" value="{{ isset($agent_code)?trim($agent_code):'' }}">
 <input type="hidden" name="form_data" value="{{json_encode($form_data)}}">
@@ -113,7 +113,7 @@ td.td_print_action{padding-left: 130px!important;}
 <input type="hidden" name="other_details" value="{{json_encode($other_details)}}">
 <button type="submit" class="btn btn-success printbtn" style="">Push to CRM</button>
 <br>
-</form>
+</form> -->
 
 <button type="submit" class="btn btn-info printbtn" onclick="window.print()" style="float: right; margin-top: -35px;">Print</button>
 
