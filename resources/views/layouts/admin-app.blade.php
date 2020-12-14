@@ -205,7 +205,7 @@
 	<button id="showLeftPush"><i class="fa fa-bars"></i></button>
 	<!--toggle button end-->
 	<!--logo -->
-	<img style="width: 18%;" src="{{url('images/Orange-Room-Logo.PNG')}}" alt="">
+	<img style="width: 18%;" src="{{url('images/Orange-Room-Logo.png')}}" alt="">
 	<!--//logo-->
 
 	<div class="clearfix"> </div>
