@@ -115,7 +115,7 @@ td.td_print_action{padding-left: 130px!important;}
 <br>
 </form> -->
 
-<button type="submit" class="btn btn-info printbtn" onclick="window.print()" style="float: right; margin-top: -35px;">Print</button>
+<button type="submit" class="btn btn-info printbtn" onclick="window.print()" style="float: right; margin-top: -20px;">Print</button>
 
 <div class="main-page">
 
