@@ -85,7 +85,7 @@ new WOW().init();
 <button id="showLeftPush"><i class="fa fa-bars"></i></button>
 <!--toggle button end-->
 <!--logo -->
-<img style="width: 18%;" src="{{url('images/Orange-Room-Logo.png')}}" alt="">
+<img style="width: 100px; margin-top: 5px;" src="{{url('images/Orange-Room-Logo.png')}}" alt="">
 <!--//logo-->
 
 <div class="clearfix"> </div>
