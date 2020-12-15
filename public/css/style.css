@@ -103,7 +103,7 @@ button#showLeftPush:hover {
     height: 92%;
     top: 76px;
     z-index: 1000;
-    background-color: #00a997;
+    background-color: #f6921d;
     padding: 2em 0;
     overflow: scroll !important;
 }
@@ -200,7 +200,7 @@ span.nav-badge-btm {
 }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     background: none;
-    color: #00a997;
+    color: #f6921d;
 }
 .chart-nav span.nav-badge-btm {
 	right: 5%;
@@ -219,7 +219,7 @@ ul.dropdown-menu{
 /*--//side-menu--*/
 /* ----Logo----*/
 .logo {
-    background: #00a997;
+    background: #f6921d;
     text-align: center;
     float: left;
 }
@@ -798,7 +798,7 @@ ul.dropdown-menu.drp-mnu li {
 }
 .user-name p{
 	font-size:1em;
-	color: #00a997;
+	color: #f6921d;
 	line-height:1em;
 	font-weight:700;
 }
@@ -846,18 +846,18 @@ ul.dropdown-menu.drp-mnu li {
 .stats-left {
     float: left;
     width: 70%;
-    background-color: #00a997;
+    background-color: #f6921d;
     text-align: center;
     padding: 1em;
 }
 .states-mdl .stats-left {
-    background-color: #00a997;
+    background-color: #f6921d;
 }
 .states-mdl .stats-right {
     background-color: rgba(88, 88, 88, 0.88);
 }
 .states-last .stats-left {
-    background-color: #00a997;
+    background-color: #f6921d;
 }
 .states-last .stats-right {
     background-color: rgba(233, 78, 2, 0.84);
@@ -1334,8 +1334,8 @@ section#tables  p {
 }
 .form-title {
     padding: 1em 2em;
-    background-color: #00a997;
-    border-bottom: 1px solid #00a997;
+    background-color: #f6921d;
+    border-bottom: 1px solid #f6921d;
 }
 .form-body {
     padding: 1.5em 2em;
